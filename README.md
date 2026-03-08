@@ -1,1 +1,1 @@
-# -AI-Based-Driver-State-Awareness-and-Cooperative-Vehicle-Safety-System
+Modern vehicles monitor driver behavior, but unsafe states such as drowsiness or distraction still depend on manual driver response. An AI-based system is needed to detect driver state and automatically assist in vehicle control to enhance safety
