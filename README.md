@@ -40,15 +40,26 @@ When drowsiness is detected, the system immediately triggers an **audio alert** 
 
 ---
 
-# Project Structure
+## Project Structure
 
+```
 Driver-Drowsiness-Detection/
-
-├── app.py                 # Flask backend server
-├── run.py                 # Real-time detection pipeline
-├── index.html             # Web interface for user interaction
-├── drowsy.pt              # Trained YOLO deep learning model
-├── voice driver.mp3       # Audio alert for driver warning
+│
+├── Backend
+│   └── app.py              # Flask server handling requests
+│
+├── Detection
+│   └── run.py              # Real-time drowsiness detection pipeline
+│
+├── Frontend
+│   └── index.html          # Web interface for monitoring
+│
+├── Model
+│   └── drowsy.pt           # YOLO trained model
+│
+└── Assets
+    └── voice_driver.mp3    # Audio alert for driver warning
+```
 
 ---
 
