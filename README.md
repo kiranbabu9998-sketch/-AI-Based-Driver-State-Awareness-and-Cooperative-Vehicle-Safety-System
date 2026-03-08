@@ -1,1 +1,174 @@
-Modern vehicles monitor driver behavior, but unsafe states such as drowsiness or distraction still depend on manual driver response. An AI-based system is needed to detect driver state and automatically assist in vehicle control to enhance safety
+# AI-Based Driver Drowsiness Detection System
+
+A real-time deep learning system for detecting driver drowsiness using computer vision.
+The system uses a **YOLO-based deep learning model** to monitor driver facial features such as eye closure and yawning and triggers a **voice alert system** to warn the driver when fatigue is detected.
+
+The project includes a **Flask-based web interface**, a trained object detection model, and a real-time video processing pipeline.
+
+---
+
+# Table of Contents
+
+* Overview
+* Project Structure
+* Features
+* Model
+* System Workflow
+* Installation
+* Running the Application
+* Supported Inputs
+* Future Improvements
+* Dependencies
+
+---
+
+# Overview
+
+Driver fatigue is one of the leading causes of road accidents worldwide. Long driving hours and reduced alertness can significantly impact driver reaction time.
+
+This project proposes an **AI-powered Driver Monitoring System (DMS)** that analyzes driver facial cues in real time using deep learning.
+
+The system detects:
+
+* Eye closure
+* Yawning
+* Signs of driver fatigue
+
+When drowsiness is detected, the system immediately triggers an **audio alert** to wake the driver and prevent accidents.
+
+---
+
+# Project Structure
+
+Driver-Drowsiness-Detection/
+
+├── app.py                 # Flask backend server
+├── run.py                 # Real-time detection pipeline
+├── index.html             # Web interface for user interaction
+├── drowsy.pt              # Trained YOLO deep learning model
+├── voice driver.mp3       # Audio alert for driver warning
+
+---
+
+# Features
+
+## Real-Time Driver Monitoring
+
+The system captures live video frames and processes them using a deep learning model to monitor the driver's facial behavior.
+
+## Eye Closure Detection
+
+The model detects whether the driver's eyes are closed for a prolonged duration, which is a key indicator of fatigue.
+
+## Yawning Detection
+
+Yawning is another strong signal of drowsiness. The system detects mouth opening patterns to identify yawning events.
+
+## Voice Alert System
+
+If drowsiness is detected, an **audio warning is played automatically** to alert the driver.
+
+## Web Interface
+
+A simple web interface allows the user to start the detection system and visualize the monitoring process.
+
+---
+
+# Model
+
+| Property   | Detail                            |
+| ---------- | --------------------------------- |
+| Model Type | YOLO-based Object Detection       |
+| Framework  | PyTorch / Ultralytics             |
+| Input      | Real-time camera frames           |
+| Output     | Detection of eye and mouth states |
+| Purpose    | Detect driver fatigue indicators  |
+| Model File | `drowsy.pt`                       |
+
+The trained model detects facial states and classifies them into categories such as:
+
+* Eyes Open
+* Eyes Closed
+* Yawning
+* Alert State
+
+---
+
+# System Workflow
+
+1. Capture real-time video from the driver's camera.
+2. Extract frames using OpenCV.
+3. Pass frames to the YOLO model (`drowsy.pt`).
+4. Detect eye and mouth states.
+5. Analyze driver behavior patterns.
+6. If drowsiness is detected:
+
+   * Trigger an **audio alert**
+   * Display warning on the interface.
+
+---
+
+# Installation
+
+## Prerequisites
+
+Python ≥ 3.9 recommended
+
+Install required libraries:
+
+pip install ultralytics
+pip install opencv-python
+pip install flask
+pip install numpy
+
+---
+
+# Running the Application
+
+Start the Flask server:
+
+python app.py
+
+After running the server, open your browser and go to:
+
+http://localhost:5000
+
+The system will start monitoring the driver using the camera.
+
+---
+
+# Supported Inputs
+
+| Input                         | Description                 |
+| ----------------------------- | --------------------------- |
+| Webcam Video                  | Real-time driver monitoring |
+| Pre-recorded video (optional) | Can be used for testing     |
+
+---
+
+# Future Improvements
+
+* Integration with **Vehicle-to-Vehicle (V2V) communication**
+* Automatic **vehicle speed reduction when drowsiness detected**
+* Mobile application for remote monitoring
+* Cloud-based driver behavior analytics
+* Integration with autonomous vehicle safety systems
+
+---
+
+# Dependencies
+
+| Package          | Purpose                      |
+| ---------------- | ---------------------------- |
+| Flask            | Web server for the interface |
+| OpenCV           | Video processing             |
+| Ultralytics YOLO | Object detection model       |
+| NumPy            | Numerical computation        |
+
+---
+
+# Conclusion
+
+This project demonstrates how **Artificial Intelligence and Computer Vision** can be used to improve road safety by detecting driver drowsiness in real time.
+
+Such intelligent monitoring systems can help reduce accidents and enhance the safety of modern transportation systems.
