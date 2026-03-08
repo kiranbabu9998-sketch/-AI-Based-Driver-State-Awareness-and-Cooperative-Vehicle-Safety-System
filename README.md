@@ -1,4 +1,4 @@
-# AI-Based Driver Drowsiness Detection System
+# AI-Based Driver fatigue Detection System
 
 A real-time deep learning system for detecting driver drowsiness using computer vision.
 The system uses a **YOLO-based deep learning model** to monitor driver facial features such as eye closure and yawning and triggers a **voice alert system** to warn the driver when fatigue is detected.
