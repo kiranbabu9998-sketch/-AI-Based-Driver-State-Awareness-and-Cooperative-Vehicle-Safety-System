@@ -125,7 +125,7 @@ The trained model detects facial states and classifies them into categories such
 
 ## Prerequisites
 
-Python ≥ 3.9 recommended
+Python ≥ 3.11 recommended
 
 Install required libraries:
 
