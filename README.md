@@ -25,33 +25,9 @@ The project includes a **Flask-based web interface**, a trained object detection
 
 ## Overview
 
-Driver fatigue is one of the leading causes of road accidents worldwide. Long driving hours and reduced alertness can significantly affect a driver's reaction time and decision-making ability, increasing the risk of accidents.
+Driver fatigue is one of the leading causes of road accidents worldwide. Long driving hours and reduced alertness can significantly affect a driver's reaction time and decision-making ability, increasing the risk of accidents.This project proposes an **AI-powered Driver Monitoring System (DMS)** that continuously observes the driver using computer vision and deep learning techniques. The system analyzes facial cues such as **eye closure and yawning** in real time using a trained YOLO-based model.
 
-This project proposes an **AI-powered Driver Monitoring System (DMS)** that continuously observes the driver using computer vision and deep learning techniques. The system analyzes facial cues such as **eye closure and yawning** in real time using a trained YOLO-based model.
-
-The system works in the following stages:
-
-1. **Real-Time Driver Monitoring**
-   A camera captures the driver's face continuously and sends video frames to the detection model.
-
-2. **Drowsiness Detection**
-   The deep learning model analyzes the frames and identifies signs of driver fatigue such as closed eyes or yawning.
-
-3. **Driver Alert Mechanism**
-   When drowsiness is detected, the system immediately triggers an **audio alert** to warn the driver and encourage them to regain attention.
-
-4. **Driver Response Observation**
-   The system observes whether the driver responds to the alert by reopening their eyes or returning to an alert state.
-
-5. **Safety Action (If No Response)**
-   If the driver does not respond to the warning within a certain period, the system attempts to simulate a safety response by:
-
-   * Indicating that the vehicle should **slow down**
-   * Attempting to **safely stop or park the vehicle at the roadside**
-
-Currently, the system focuses on **driver monitoring and vehicle safety response within a single vehicle environment**. Communication with other nearby vehicles (Vehicle-to-Vehicle communication) is not implemented in the present version.
-
-This project demonstrates how **AI-based driver monitoring systems can improve road safety by detecting fatigue early and initiating preventive safety actions**.
+Currently, the system focuses on **driver monitoring and vehicle safety response within a single vehicle environment**. Communication with other nearby vehicles (Vehicle-to-Vehicle communication) is not implemented in the present version.This project demonstrates how **AI-based driver monitoring systems can improve road safety by detecting fatigue early and initiating preventive safety actions**.
 
 
 The system detects:
@@ -69,13 +45,9 @@ When drowsiness is detected, the system immediately triggers an **audio alert** 
 Driver-Drowsiness-Detection/
 
 ├── app.py                 # Flask backend server
-
 ├── run.py                 # Real-time detection pipeline
-
 ├── index.html             # Web interface for user interaction
-
 ├── drowsy.pt              # Trained YOLO deep learning model
-
 ├── voice driver.mp3       # Audio alert for driver warning
 
 ---
